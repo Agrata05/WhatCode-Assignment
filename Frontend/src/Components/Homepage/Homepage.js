@@ -7,7 +7,6 @@ const Homepage = () => {
   return (
     <div className="Homepage-Container">
       <SearchBar/>
-      <Display/>
     </div>
   );
 };

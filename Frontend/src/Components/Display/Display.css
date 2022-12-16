@@ -1,9 +1,10 @@
 .Display-Container{
-    width: 40vw;
-    height: 60vh;
+    width: 20vw;
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-style:solid; */
+    border-style:solid;
+    border-color: rgb(111, 255, 133);
     margin: 1rem;
 }
