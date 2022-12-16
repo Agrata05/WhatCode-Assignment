@@ -1,0 +1,9 @@
+.Display-Container{
+    width: 40vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-style:solid; */
+    margin: 1rem;
+}
