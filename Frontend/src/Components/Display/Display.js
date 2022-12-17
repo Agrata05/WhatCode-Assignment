@@ -5,10 +5,7 @@ const Display = (props) => {
   let loader = props.loading
   let data = props.data
 
-  console.log("here in display")
-  console.log(props)
   if(loader){
-    console.log("loader")
     return (
       <div className='Display-Container'>
         <img src={loaderIMG} alt='loader' />
@@ -19,9 +16,10 @@ const Display = (props) => {
   if(data){
     return (
       <div className='Display-Container'>
+        <div className='Display-Name'>{data.name}</div>
         <div>
-        <div>Open Price: {data.open}</div>
-        <div>Previous Close Price: {data.previousClose}</div>
+        <div style={{margin:"10px"}}><strong>Open Price:</strong> {data.open} USD</div>
+        <div style={{margin:"10px"}}><strong>Previous Close Price:</strong> {data.previousClose} USD</div>
         </div>
       </div>
     )
