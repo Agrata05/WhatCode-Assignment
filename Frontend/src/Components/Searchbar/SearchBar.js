@@ -8,19 +8,26 @@ import {
   TextField,
 } from "@mui/material";
 const stocksNames = Object.keys(data);
-console.log(stocksNames[1]);
-console.log(stocksNames);
 
 const SearchBar = () => {
    
     const [Price,setPrice] = useState("");
+    const [isLoading,setIsLoading] = useState(false);
 
   const searchHandler = async (code) =>{
-    const res = await axios.get('http://localhost:8081/'+code);
+    try{
+        setIsLoading(true);
+        const res = await axios.get('http://localhost:8081/' + code);
+        setIsLoading(false)
+        setPrice({...res.data});
+        console.log(Price)
+    }
+    catch(err){
+        // Error Handeling
+        console.log(err)
+        setIsLoading(false);
+    }
     
-    setPrice({...res.data});
-    console.log("SearchBar")
-    console.log(Price)
   }
 
   return (
@@ -34,14 +41,10 @@ const SearchBar = () => {
           <TextField {...params} label="With categories" />
         )}
         onChange={(event, value, reason) => {
-            console.log('event: ', event);
-            console.log('reason: ', reason);
-            console.log('value: ', value);
-            console.log("code",data[value]);
             searchHandler(data[value])
         }}
       />
-      {Price?<Display data={Price}/>:<Display/>}
+      {Price?<Display loading={isLoading} data={Price}/>:<Display loading={isLoading}/>}
     </div>
   );
 };

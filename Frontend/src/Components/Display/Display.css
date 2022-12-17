@@ -5,6 +5,14 @@
     justify-content: center;
     align-items: center;
     border-style:solid;
-    border-color: rgb(111, 255, 133);
+    /* border-color: rgb(36, 149, 241); */
+    border-color: #5d88de;
     margin: 1rem;
 }
+
+.Display-Container img{
+    align-items: center;
+    width: 10vh;
+    height: 10vw;
+}
+
