@@ -3,5 +3,11 @@
   "Dow Chemical": "DOW",
   "Campbell Soup": "CPB",
   "Disney": "DIS",
-  "Exxon Mobil": "XOM"
+  "Exxon Mobil": "XOM",
+  "Ford":"F",
+  "General Mills":"GIS",
+  "Hewlett Packard":"HPQ",
+  "IBM":"IBM",
+  "Johnson & Johnson":"JNJ",
+  "Microsoft":"MSFT"
 }

@@ -12,7 +12,8 @@ import Display from "../Display/Display";
 
 
 const stocksNames = Object.keys(data);
-
+const BASE_URL = 'https://whatcode-assignment-production.up.railway.app/'
+// const TEST_URL = 'http://localhost:8081/'
 const SearchBar = () => {
    
     const [Price,setPrice] = useState(""); // String the prices of Stocks
@@ -25,7 +26,7 @@ const SearchBar = () => {
             setIsLoading(true); 
 
             // Fetching Data from backend
-            const res = await axios.get('http://localhost:8081/' + data[name]);
+            const res = await axios.get(BASE_URL + data[name]);
             // Setting Loader to False
 
             setIsLoading(false)
